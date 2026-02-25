@@ -1,0 +1,86 @@
+---
+const faqs = [
+  {
+    question: "¿Qué es un Certificado Energético (CEE) y cuándo lo necesito?",
+    answer: "El Certificado de Eficiencia Energética (CEE) es un documento oficial que califica la eficiencia energética de un inmueble en una escala de la A (más eficiente) a la G (menos eficiente). Es obligatorio para la venta o alquiler de viviendas, locales y oficinas. Tiene una validez de 10 años."
+  },
+  {
+    question: "¿Qué es el Boletín Eléctrico (CIE) y para qué sirve?",
+    answer: "El Boletín Eléctrico, oficialmente llamado Certificado de Instalación Eléctrica (CIE), es un documento que certifica que tu instalación eléctrica cumple con el Reglamento Electrotécnico de Baja Tensión. Lo necesitas para dar de alta el suministro eléctrico, realizar cambios de potencia, cambios de titularidad o tras la inspección periódica obligatoria."
+  },
+  {
+    question: "¿Cuánto tiempo se tarda en obtener un certificado?",
+    answer: "El Certificado Energético (CEE) lo entregamos normalmente en 24-48 horas tras la visita técnica. El Boletín Eléctrico (CIE) puede emitirse incluso en el mismo día de la inspección. Para proyectos más complejos, el plazo depende del tipo de trabajo, pero siempre te informamos previamente."
+  },
+  {
+    question: "¿Trabajáis tanto para empresas como para particulares?",
+    answer: "Sí, ofrecemos todos nuestros servicios tanto a empresas como a particulares. Desde un Certificado Energético (CEE) para tu vivienda hasta un proyecto eléctrico completo para una nave industrial. Adaptamos nuestras soluciones a cada necesidad."
+  },
+  {
+    question: "¿El presupuesto es realmente gratuito?",
+    answer: "Sí, el presupuesto es totalmente gratuito y sin compromiso. Cuéntanos qué necesitas y te preparamos una propuesta personalizada con el precio cerrado. Sin sorpresas ni costes ocultos."
+  },
+  {
+    question: "¿Qué zonas cubrís?",
+    answer: "Ofrecemos nuestros servicios a nivel local y provincial. Contacta con nosotros para confirmar disponibilidad en tu zona. Para proyectos de mayor envergadura, podemos desplazarnos a otras localidades."
+  },
+  {
+    question: "¿Qué incluye la instalación de placas solares fotovoltaicas?",
+    answer: "Nuestro servicio de instalaciones fotovoltaicas incluye: estudio de viabilidad, diseño del sistema, tramitación de permisos y subvenciones, instalación completa, legalización ante industria y puesta en marcha. Además, te asesoramos sobre la financiación y el retorno de la inversión."
+  },
+  {
+    question: "¿Instaláis puntos de recarga en comunidades de propietarios?",
+    answer: "Sí, realizamos instalaciones de puntos de recarga para vehículos eléctricos tanto individuales como compartidos en comunidades de propietarios, cumpliendo con toda la normativa vigente (ITC-BT-52). También instalamos en viviendas unifamiliares y empresas."
+  }
+];
+---
+
+<section id="faq" class="py-20 lg:py-28 bg-white">
+  <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full mb-4">Preguntas frecuentes</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-6">
+        Resolvemos tus <span class="text-primary-600">dudas</span>
+      </h2>
+      <p class="text-lg text-gray-600">Las preguntas más habituales de nuestros clientes. Si no encuentras tu respuesta, <a href="#contacto" class="text-primary-600 font-semibold hover:underline">contáctanos</a>.</p>
+    </div>
+
+    <div class="space-y-4">
+      {faqs.map((faq, idx) => (
+        <details class="group bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden hover:shadow-md transition-all duration-200">
+          <summary class="flex items-center justify-between gap-4 p-6 cursor-pointer list-none [&::-webkit-details-marker]:hidden">
+            <h3 class="text-base lg:text-lg font-semibold text-gray-900 group-open:text-primary-600 transition-colors pr-4">{faq.question}</h3>
+            <div class="w-8 h-8 bg-white rounded-lg shadow-sm flex items-center justify-center shrink-0 group-open:bg-primary-600 transition-all">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 text-gray-500 group-open:text-white group-open:rotate-45 transition-all duration-300">
+                <path d="M12 5v14"/>
+                <path d="M5 12h14"/>
+              </svg>
+            </div>
+          </summary>
+          <div class="px-6 pb-6 -mt-2">
+            <p class="text-gray-600 leading-relaxed">{faq.answer}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <div class="text-center mt-12 bg-primary-50 rounded-2xl p-8 border border-primary-100">
+      <p class="text-gray-700 font-medium mb-4">¿Tienes más preguntas? Estamos para ayudarte</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:621319662" class="inline-flex items-center justify-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-all shadow-md">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+          Llamar al 621 319 662
+        </a>
+        <a href="mailto:sanes.ing@gmail.com" class="inline-flex items-center justify-center px-6 py-3 bg-white text-primary-600 font-semibold rounded-xl border-2 border-primary-200 hover:bg-primary-50 transition-all">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 mr-2">
+            <rect width="20" height="16" x="2" y="4" rx="2"/>
+            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          </svg>
+          Enviar email
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

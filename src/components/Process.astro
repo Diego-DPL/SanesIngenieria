@@ -1,0 +1,73 @@
+---
+const steps = [
+  {
+    number: "01",
+    title: "Contacta con nosotros",
+    description: "Llámanos, envía un email o rellena el formulario. Te respondemos en menos de 24 horas con un presupuesto personalizado y sin compromiso.",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-8 h-8"><path d="M36 30v4a4 4 0 0 1-4.36 4 39.58 39.58 0 0 1-17.26-6.14 39 39 0 0 1-12-12A39.58 39.58 0 0 1 .24 2.56 4 4 0 0 1 4.22 0h4a4 4 0 0 1 4 3.44 25.68 25.68 0 0 0 1.4 5.62 4 4 0 0 1-.9 4.22L10.18 15.82a32 32 0 0 0 12 12l2.54-2.54a4 4 0 0 1 4.22-.9 25.68 25.68 0 0 0 5.62 1.4A4 4 0 0 1 38 29.84V34" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" transform="translate(5 7)"/></svg>`
+  },
+  {
+    number: "02",
+    title: "Visita técnica",
+    description: "Un ingeniero colegiado acude a tu inmueble o instalación para realizar la evaluación técnica necesaria. Nos adaptamos a tu horario.",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-8 h-8"><path d="M24 44s16-8 16-20V10L24 4 8 10v14c0 12 16 20 16 20z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor" fill-opacity="0.1"/><path d="M17 24l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+  },
+  {
+    number: "03",
+    title: "Ejecución del proyecto",
+    description: "Realizamos el trabajo con la máxima profesionalidad: certificados, proyectos, instalaciones o lo que necesites. Todo con garantía colegial.",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-8 h-8"><rect x="8" y="8" width="32" height="32" rx="4" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.1"/><path d="M16 24h16M16 18h10M16 30h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M32 14l0 20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-dasharray="2 3"/></svg>`
+  },
+  {
+    number: "04",
+    title: "Entrega y tramitación",
+    description: "Te entregamos toda la documentación y nos encargamos del registro y tramitación ante los organismos correspondientes. Sin que tú te preocupes de nada.",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-8 h-8"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.1"/><path d="M16 24l5 5 10-10" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+  },
+];
+---
+
+<section id="proceso" class="py-20 lg:py-28 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full mb-4">Cómo trabajamos</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-6">
+        Así de fácil es <span class="text-primary-600">trabajar con nosotros</span>
+      </h2>
+      <p class="text-lg text-gray-600">Un proceso sencillo, transparente y sin complicaciones. Tú solo contacta, nosotros nos encargamos de todo.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      {steps.map((step, idx) => (
+        <div class="relative text-center group">
+          {/* Connector Line */}
+          {idx < steps.length - 1 && (
+            <div class="hidden lg:block absolute top-12 left-[60%] w-[80%] h-0.5 bg-gradient-to-r from-primary-300 to-primary-100"></div>
+          )}
+          
+          <div class="relative z-10 mb-6">
+            <div class="w-24 h-24 mx-auto bg-white rounded-2xl shadow-lg flex items-center justify-center text-primary-600 group-hover:shadow-xl group-hover:-translate-y-1 transition-all duration-300 border border-gray-100">
+              <Fragment set:html={step.svg} />
+            </div>
+            <span class="absolute -top-2 -right-2 w-8 h-8 bg-primary-600 text-white text-sm font-bold rounded-full flex items-center justify-center shadow-md">
+              {step.number}
+            </span>
+          </div>
+          
+          <h3 class="text-xl font-heading font-bold text-gray-900 mb-3">{step.title}</h3>
+          <p class="text-gray-600 leading-relaxed text-sm">{step.description}</p>
+        </div>
+      ))}
+    </div>
+
+    <div class="text-center mt-14">
+      <a href="#contacto" class="inline-flex items-center px-8 py-4 bg-primary-600 text-white font-bold rounded-xl hover:bg-primary-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 text-lg">
+        Empezar ahora — Es gratis
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-2">
+          <path d="M5 12h14"/>
+          <path d="m12 5 7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

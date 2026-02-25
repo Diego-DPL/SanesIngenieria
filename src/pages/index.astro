@@ -1,0 +1,35 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import TrustBar from '../components/TrustBar.astro';
+import Services from '../components/Services.astro';
+import FeaturedServices from '../components/FeaturedServices.astro';
+import Audience from '../components/Audience.astro';
+import Process from '../components/Process.astro';
+import Testimonials from '../components/Testimonials.astro';
+import FAQ from '../components/FAQ.astro';
+import Contact from '../components/Contact.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppButton from '../components/WhatsAppButton.astro';
+import MobileCTA from '../components/MobileCTA.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Sanes Ingeniería | Certificado Energético (CEE), Boletín Eléctrico (CIE) y más">
+  <Header />
+  <main>
+    <Hero />
+    <TrustBar />
+    <FeaturedServices />
+    <Services />
+    <Audience />
+    <Process />
+    <Testimonials />
+    <FAQ />
+    <Contact />
+  </main>
+  <Footer />
+  <WhatsAppButton />
+  <MobileCTA />
+</Layout>

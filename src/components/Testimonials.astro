@@ -1,0 +1,95 @@
+---
+const testimonials = [
+  {
+    name: "María García",
+    role: "Propietaria en Valencia",
+    text: "Necesitaba el Certificado Energético (CEE) urgente para vender mi piso y me lo entregaron en 24 horas. Profesionales y muy amables. Totalmente recomendable.",
+    rating: 5,
+  },
+  {
+    name: "Carlos Martínez",
+    role: "Gerente de restaurante",
+    text: "Nos gestionaron la licencia de apertura completa y el proyecto eléctrico. Todo perfecto, sin complicaciones y cumpliendo plazos. Volveremos a contar con ellos.",
+    rating: 5,
+  },
+  {
+    name: "Ana López",
+    role: "Particular",
+    text: "Contraté el Boletín Eléctrico (CIE) para dar de alta la luz en mi nueva vivienda. Vinieron el mismo día y lo tuve todo listo en horas. Precio justo y gran servicio.",
+    rating: 5,
+  },
+  {
+    name: "Pedro Sánchez",
+    role: "Director de nave industrial",
+    text: "La instalación fotovoltaica que nos hicieron ha reducido nuestros costes energéticos un 65%. Excelente asesoramiento y ejecución impecable del proyecto.",
+    rating: 5,
+  },
+  {
+    name: "Laura Fernández",
+    role: "Administradora de fincas",
+    text: "Trabajamos con Sanes para los puntos de recarga de varias comunidades. Siempre cumplen plazos, precios competitivos y la calidad del trabajo es excelente.",
+    rating: 5,
+  },
+  {
+    name: "Roberto Jiménez",
+    role: "Propietario de comercio",
+    text: "La auditoría energética que nos realizaron fue muy detallada. Implementamos sus recomendaciones y estamos ahorrando más de un 40% en la factura de la luz.",
+    rating: 5,
+  },
+];
+---
+
+<section id="testimonios" class="py-20 lg:py-28 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full mb-4">Opiniones reales</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-6">
+        Lo que dicen <span class="text-primary-600">nuestros clientes</span>
+      </h2>
+      <p class="text-lg text-gray-600">La satisfacción de nuestros clientes es nuestra mejor carta de presentación.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {testimonials.map((testimonial) => (
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+          <!-- Stars -->
+          <div class="flex gap-1 mb-4">
+            {[...Array(testimonial.rating)].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#facc15" class="w-5 h-5">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+              </svg>
+            ))}
+          </div>
+          
+          <!-- Quote -->
+          <p class="text-gray-700 leading-relaxed mb-6 text-sm">"{testimonial.text}"</p>
+          
+          <!-- Author -->
+          <div class="flex items-center gap-3 pt-4 border-t border-gray-100">
+            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center">
+              <span class="text-primary-700 text-sm font-bold">{testimonial.name.charAt(0)}</span>
+            </div>
+            <div>
+              <p class="font-semibold text-gray-900 text-sm">{testimonial.name}</p>
+              <p class="text-gray-500 text-xs">{testimonial.role}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Google Reviews CTA -->
+    <div class="text-center mt-12">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-white rounded-full shadow-md border border-gray-100">
+        <div class="flex gap-0.5">
+          {[...Array(5)].map(() => (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#facc15" class="w-4 h-4">
+              <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+            </svg>
+          ))}
+        </div>
+        <span class="text-sm font-semibold text-gray-700">5.0 — Valoración de nuestros clientes</span>
+      </div>
+    </div>
+  </div>
+</section>

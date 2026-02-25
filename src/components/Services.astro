@@ -1,0 +1,122 @@
+---
+const services = [
+  {
+    title: "Proyectos y Licencias de Apertura",
+    description: "Gestionamos todos los trámites técnicos y administrativos para que tu negocio abra sus puertas sin complicaciones. Proyectos visados y licencias de actividad.",
+    color: "from-blue-500 to-blue-600",
+    bgLight: "bg-blue-50",
+    textColor: "text-blue-600",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-10 h-10"><rect x="8" y="6" width="24" height="32" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M14 14h12M14 20h12M14 26h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M28 30l4 4 8-8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`
+  },
+  {
+    title: "Proyectos Eléctricos",
+    description: "Diseño y cálculo de instalaciones eléctricas para todo tipo de edificaciones. Proyectos eléctricos en baja y media tensión con visado colegial.",
+    color: "from-indigo-500 to-indigo-600",
+    bgLight: "bg-indigo-50",
+    textColor: "text-indigo-600",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-10 h-10"><rect x="6" y="8" width="36" height="28" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M20 16l-4 8h8l-4 8" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 16v16M34 20v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`
+  },
+  {
+    title: "Certificado Energético (CEE)",
+    description: "Certificado obligatorio para la venta o alquiler de viviendas y locales. Evaluamos la eficiencia energética de tu inmueble y te asesoramos para mejorarla.",
+    color: "from-green-500 to-emerald-600",
+    bgLight: "bg-green-50",
+    textColor: "text-green-600",
+    featured: true,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-10 h-10"><rect x="8" y="4" width="32" height="40" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M16 16h16M16 22h16M16 28h10" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><rect x="28" y="28" width="10" height="6" rx="1.5" fill="currentColor" opacity="0.2" stroke="currentColor" stroke-width="1.5"/><text x="33" y="33" text-anchor="middle" font-size="5" font-weight="bold" fill="currentColor">A</text></svg>`
+  },
+  {
+    title: "Boletín Eléctrico (CIE)",
+    description: "Certificado de la Instalación Eléctrica necesario para dar de alta la luz, cambios de potencia o verificaciones periódicas. Inspección y emisión en el acto.",
+    color: "from-amber-500 to-orange-500",
+    bgLight: "bg-amber-50",
+    textColor: "text-amber-600",
+    featured: true,
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-10 h-10"><path d="M26 4L10 28h12L18 44l18-26H24L26 4z" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor" fill-opacity="0.1"/></svg>`
+  },
+  {
+    title: "Instalaciones Eléctricas",
+    description: "Ejecución de instalaciones eléctricas completas: cuadros eléctricos, cableado, iluminación y sistemas de protección para viviendas, naves y comercios.",
+    color: "from-cyan-500 to-teal-600",
+    bgLight: "bg-cyan-50",
+    textColor: "text-cyan-600",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-10 h-10"><rect x="14" y="8" width="20" height="32" rx="3" stroke="currentColor" stroke-width="2.5" fill="none"/><circle cx="24" cy="20" r="4" stroke="currentColor" stroke-width="2"/><path d="M20 32h8M18 36h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M24 12v-4M32 20h4M16 20h-4M24 28v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`
+  },
+  {
+    title: "Instalaciones Fotovoltaicas",
+    description: "Diseño e instalación de sistemas de energía solar para autoconsumo. Reduce tu factura eléctrica hasta un 70% y contribuye al medio ambiente.",
+    color: "from-yellow-500 to-amber-500",
+    bgLight: "bg-yellow-50",
+    textColor: "text-yellow-600",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-10 h-10"><circle cx="24" cy="24" r="8" stroke="currentColor" stroke-width="2.5" fill="currentColor" fill-opacity="0.1"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6M9.86 9.86l4.24 4.24M33.9 33.9l4.24 4.24M9.86 38.14l4.24-4.24M33.9 14.1l4.24-4.24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>`
+  },
+  {
+    title: "Puntos de Recarga de Vehículos Eléctricos",
+    description: "Instalación de estaciones de carga para coches eléctricos en garajes comunitarios, viviendas y empresas. Cumplimos con toda la normativa vigente.",
+    color: "from-violet-500 to-purple-600",
+    bgLight: "bg-violet-50",
+    textColor: "text-violet-600",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-10 h-10"><rect x="6" y="14" width="24" height="24" rx="4" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M14 26l4-6h4l-2 6h4l-6 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M30 22h6a4 4 0 0 1 4 4v8a2 2 0 0 1-4 0v-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" fill="none"/><circle cx="38" cy="18" r="3" stroke="currentColor" stroke-width="2"/></svg>`
+  },
+  {
+    title: "Auditorías de Eficiencia Energética",
+    description: "Analizamos el consumo energético de tu empresa o vivienda y proponemos mejoras para reducir costes y emisiones. Certificación y asesoría integral.",
+    color: "from-emerald-500 to-green-600",
+    bgLight: "bg-emerald-50",
+    textColor: "text-emerald-600",
+    svg: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none" class="w-10 h-10"><circle cx="24" cy="24" r="16" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M24 14v10l6 6" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18 8l-2-4M30 8l2-4M8 18l-4-2M8 30l-4 2M40 18l4-2M40 30l4 2M18 40l-2 4M30 40l2 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>`
+  }
+];
+---
+
+<section id="servicios" class="py-20 lg:py-28 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <span class="inline-block px-4 py-1.5 bg-primary-100 text-primary-700 text-sm font-semibold rounded-full mb-4">Nuestros servicios</span>
+      <h2 class="text-3xl sm:text-4xl lg:text-5xl font-heading font-extrabold text-gray-900 mb-6">
+        Soluciones de ingeniería <span class="text-primary-600">a tu medida</span>
+      </h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
+        Ofrecemos un servicio integral de ingeniería tanto para <strong>empresas</strong> como para <strong>particulares</strong>. Desde certificados hasta instalaciones completas.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {services.map((service) => (
+        <div class={`group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border ${service.featured ? 'border-primary-200 ring-2 ring-primary-100' : 'border-gray-100'}`}>
+          {service.featured && (
+            <div class="absolute -top-3 left-6 px-3 py-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-xs font-bold rounded-full shadow-md">
+              ★ Más solicitado
+            </div>
+          )}
+          <div class={`w-14 h-14 ${service.bgLight} ${service.textColor} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300`}>
+            <Fragment set:html={service.svg} />
+          </div>
+          <h3 class="text-lg font-heading font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{service.title}</h3>
+          <p class="text-sm text-gray-600 leading-relaxed mb-4">{service.description}</p>
+          <a href="#contacto" class={`inline-flex items-center text-sm font-semibold ${service.textColor} hover:underline group/link`}>
+            Solicitar información
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-4 h-4 ml-1 group-hover/link:translate-x-1 transition-transform">
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- Bottom CTA -->
+    <div class="text-center mt-12">
+      <p class="text-gray-500 mb-4">¿No encuentras lo que buscas? Consúltanos sin compromiso</p>
+      <a href="#contacto" class="inline-flex items-center px-6 py-3 bg-primary-600 text-white font-semibold rounded-xl hover:bg-primary-700 transition-all duration-200 shadow-md hover:shadow-lg">
+        Contactar ahora
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-5 h-5 ml-2">
+          <path d="M5 12h14"/>
+          <path d="m12 5 7 7-7 7"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>

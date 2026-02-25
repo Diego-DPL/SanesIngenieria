@@ -1,0 +1,71 @@
+---
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Sanes Ingeniería - Servicios profesionales de ingeniería: Certificados Energéticos (CEE), Boletines Eléctricos (CIE), instalaciones fotovoltaicas, puntos de recarga y más. Soluciones para empresas y particulares." } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="certificado energético, boletín eléctrico, CIE, CEE, instalaciones eléctricas, fotovoltaica, punto de recarga, ingeniería, licencia de apertura, auditoría energética" />
+    <meta name="author" content="Sanes Ingeniería" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sanesingenieria.com" />
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:site_name" content="Sanes Ingeniería" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    
+    <!-- Canonical -->
+    <link rel="canonical" href="https://sanesingenieria.com" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet" />
+    
+    <title>{title}</title>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Sanes Ingeniería",
+      "url": "https://sanesingenieria.com",
+      "telephone": "+34621319662",
+      "email": "sanes.ing@gmail.com",
+      "description": "Servicios profesionales de ingeniería: Certificados Energéticos, Boletines Eléctricos, instalaciones eléctricas, fotovoltaicas y más.",
+      "priceRange": "$$",
+      "serviceType": [
+        "Certificado Energético",
+        "Boletín Eléctrico",
+        "Instalaciones Eléctricas",
+        "Instalaciones Fotovoltaicas",
+        "Puntos de Recarga",
+        "Auditoría Energética",
+        "Proyectos Eléctricos",
+        "Licencia de Apertura"
+      ]
+    })} />
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <slot />
+  </body>
+</html>
