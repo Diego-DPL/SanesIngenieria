@@ -87,7 +87,7 @@ const services = [
       {services.map((service) => (
         <div class={`group relative bg-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border ${service.featured ? 'border-primary-200 ring-2 ring-primary-100' : 'border-gray-100'}`}>
           {service.featured && (
-            <div class="absolute -top-3 left-6 px-3 py-1 bg-gradient-to-r from-primary-500 to-primary-600 text-white text-xs font-bold rounded-full shadow-md">
+            <div class="absolute -top-3 left-6 px-3 py-1 bg-linear-to-r from-primary-500 to-primary-600 text-white text-xs font-bold rounded-full shadow-md">
               ★ Más solicitado
             </div>
           )}
