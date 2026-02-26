@@ -24,17 +24,24 @@ const { title, description = "Sanes Ingeniería - Servicios profesionales de ing
     <meta property="og:url" content="https://sanesingenieria.com" />
     <meta property="og:locale" content="es_ES" />
     <meta property="og:site_name" content="Sanes Ingeniería" />
+    <meta property="og:image" content="https://sanesingenieria.com/og-image.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Sanes Ingeniería - Certificados Energéticos, Boletines Eléctricos y más" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://sanesingenieria.com/og-image.svg" />
     
     <!-- Canonical -->
-    <link rel="canonical" href="https://sanesingenieria.com" />
+    <link rel="canonical" href={`https://sanesingenieria.com${Astro.url.pathname}`} />
     
-    <!-- Favicon -->
+    <!-- Favicon + Manifest -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <meta name="theme-color" content="#1d4ed8" />
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,25 +50,57 @@ const { title, description = "Sanes Ingeniería - Servicios profesionales de ing
     
     <title>{title}</title>
 
-    <!-- Structured Data -->
+    <!-- Structured Data: LocalBusiness -->
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "ProfessionalService",
       "name": "Sanes Ingeniería",
       "url": "https://sanesingenieria.com",
+      "logo": "https://sanesingenieria.com/favicon.svg",
+      "image": "https://sanesingenieria.com/og-image.svg",
       "telephone": "+34621319662",
       "email": "sanes.ing@gmail.com",
-      "description": "Servicios profesionales de ingeniería: Certificados Energéticos, Boletines Eléctricos, instalaciones eléctricas, fotovoltaicas y más.",
+      "description": "Servicios profesionales de ingeniería: Certificados Energéticos (CEE), Boletines Eléctricos (CIE), instalaciones eléctricas, fotovoltaicas, puntos de recarga y auditorías energéticas. Para empresas y particulares.",
       "priceRange": "$$",
-      "serviceType": [
-        "Certificado Energético",
-        "Boletín Eléctrico",
-        "Instalaciones Eléctricas",
-        "Instalaciones Fotovoltaicas",
-        "Puntos de Recarga",
-        "Auditoría Energética",
-        "Proyectos Eléctricos",
-        "Licencia de Apertura"
+      "currenciesAccepted": "EUR",
+      "paymentAccepted": "Efectivo, Transferencia bancaria, Tarjeta",
+      "areaServed": {
+        "@type": "Country",
+        "name": "España"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      "sameAs": [],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Ingeniería",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Certificado Energético (CEE)", "description": "Certificado de eficiencia energética obligatorio para venta o alquiler de inmuebles" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Boletín Eléctrico (CIE)", "description": "Certificado de Instalación Eléctrica para altas de luz, cambios de potencia e inspecciones" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proyectos y Licencias de Apertura" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proyectos Eléctricos" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalaciones Eléctricas" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalaciones Fotovoltaicas" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Puntos de Recarga de Vehículos Eléctricos" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditorías de Eficiencia Energética" } }
+        ]
+      }
+    })} />
+
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "¿Qué es un Certificado Energético (CEE) y cuándo lo necesito?", "acceptedAnswer": { "@type": "Answer", "text": "El Certificado de Eficiencia Energética (CEE) es un documento oficial que califica la eficiencia energética de un inmueble en una escala de la A a la G. Es obligatorio para la venta o alquiler de viviendas, locales y oficinas. Tiene una validez de 10 años." } },
+        { "@type": "Question", "name": "¿Qué es el Boletín Eléctrico (CIE) y para qué sirve?", "acceptedAnswer": { "@type": "Answer", "text": "El Boletín Eléctrico (CIE) es un documento que certifica que tu instalación eléctrica cumple con el Reglamento Electrotécnico de Baja Tensión. Lo necesitas para dar de alta el suministro eléctrico, realizar cambios de potencia, cambios de titularidad o tras la inspección periódica obligatoria." } },
+        { "@type": "Question", "name": "¿Cuánto tiempo se tarda en obtener un certificado?", "acceptedAnswer": { "@type": "Answer", "text": "El Certificado Energético (CEE) se entrega normalmente en 24-48 horas tras la visita técnica. El Boletín Eléctrico (CIE) puede emitirse incluso en el mismo día de la inspección." } },
+        { "@type": "Question", "name": "¿Trabajáis tanto para empresas como para particulares?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, ofrecemos todos nuestros servicios tanto a empresas como a particulares. Desde un Certificado Energético para tu vivienda hasta un proyecto eléctrico completo para una nave industrial." } },
+        { "@type": "Question", "name": "¿El presupuesto es realmente gratuito?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, el presupuesto es totalmente gratuito y sin compromiso. Cuéntanos qué necesitas y te preparamos una propuesta personalizada con el precio cerrado. Sin sorpresas ni costes ocultos." } }
       ]
     })} />
   </head>
