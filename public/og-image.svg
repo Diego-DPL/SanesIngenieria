@@ -51,7 +51,7 @@
   <text x="130" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#0f0f1a">Presupuesto gratuito →</text>
 
   <!-- Contact -->
-  <text x="460" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="white" opacity="0.7">621 319 662 · sanes.ing@gmail.com</text>
+  <text x="460" y="516" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="600" fill="white" opacity="0.7">621 319 662 · jjsanes.ing@gmail.com</text>
 
   <!-- Bottom accent line -->
   <rect x="0" y="620" width="1200" height="10" fill="url(#accent)"/>
