@@ -1,4 +1,16 @@
 User-agent: *
 Allow: /
+Disallow: /dist/
+Disallow: /.astro/
+
+# Bloquear rastreadores de IA que no respetan contenido
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
 
 Sitemap: https://sanesingenieria.com/sitemap-index.xml
