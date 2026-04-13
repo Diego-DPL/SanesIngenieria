@@ -4,7 +4,7 @@ export interface Props {
   description?: string;
 }
 
-const { title, description = "Sanes Ingeniería - Servicios profesionales de ingeniería: Certificados Energéticos (CEE), Boletines Eléctricos (CIE), instalaciones fotovoltaicas, puntos de recarga y más. Soluciones para empresas y particulares." } = Astro.props;
+const { title, description = "Sanes Ingeniería - Ingeniería técnica en Murcia: Certificados Energéticos (CEE), Boletines Eléctricos (CIE), instalaciones fotovoltaicas, topografía, proyectos industriales y más. Presupuesto gratuito en 24h. Servicio en Murcia, Cartagena, La Manga y toda la Región de Murcia." } = Astro.props;
 ---
 
 <!doctype html>
@@ -13,7 +13,7 @@ const { title, description = "Sanes Ingeniería - Servicios profesionales de ing
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
-    <meta name="keywords" content="certificado energético, boletín eléctrico, CIE, CEE, instalaciones eléctricas, fotovoltaica, punto de recarga, ingeniería, licencia de apertura, auditoría energética" />
+    <meta name="keywords" content="certificado energético Murcia, boletín eléctrico Murcia, CIE Murcia, CEE Murcia, instalaciones eléctricas Murcia, fotovoltaica Murcia, punto de recarga Murcia, ingeniería eléctrica Murcia, auditoría energética Murcia, proyectos eléctricos Murcia, naves industriales Murcia, ingeniería civil Murcia, topografía Murcia, levantamiento topográfico Murcia, deslindes Murcia, consultoría técnica Murcia, gestiones ante industria Murcia, certificado energético Cartagena, ingeniero Cartagena, certificado energético La Manga, ingeniero Murcia, ingeniería Región de Murcia" />
     <meta name="author" content="Sanes Ingeniería" />
     <meta name="robots" content="index, follow" />
     
@@ -69,10 +69,26 @@ const { title, description = "Sanes Ingeniería - Servicios profesionales de ing
       "priceRange": "$$",
       "currenciesAccepted": "EUR",
       "paymentAccepted": "Efectivo, Transferencia bancaria, Tarjeta",
-      "areaServed": {
-        "@type": "Country",
-        "name": "España"
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Murcia",
+        "addressRegion": "Región de Murcia",
+        "addressCountry": "ES"
       },
+      "areaServed": [
+        { "@type": "City", "name": "Murcia" },
+        { "@type": "City", "name": "Cartagena" },
+        { "@type": "City", "name": "La Manga del Mar Menor" },
+        { "@type": "City", "name": "Molina de Segura" },
+        { "@type": "City", "name": "Alcantarilla" },
+        { "@type": "City", "name": "Lorca" },
+        { "@type": "City", "name": "Mazarrón" },
+        { "@type": "City", "name": "Águilas" },
+        { "@type": "City", "name": "Torre-Pacheco" },
+        { "@type": "City", "name": "San Javier" },
+        { "@type": "City", "name": "Los Alcázares" },
+        { "@type": "AdministrativeArea", "name": "Región de Murcia" }
+      ],
       "openingHoursSpecification": {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
@@ -84,14 +100,21 @@ const { title, description = "Sanes Ingeniería - Servicios profesionales de ing
         "@type": "OfferCatalog",
         "name": "Servicios de Ingeniería",
         "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Certificado Energético (CEE)", "description": "Certificado de eficiencia energética obligatorio para venta o alquiler de inmuebles" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Boletín Eléctrico (CIE)", "description": "Certificado de Instalación Eléctrica para altas de luz, cambios de potencia e inspecciones" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proyectos y Licencias de Apertura" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proyectos Eléctricos" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalaciones Eléctricas" } },
           { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Instalaciones Fotovoltaicas" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Puntos de Recarga de Vehículos Eléctricos" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditorías de Eficiencia Energética" } }
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Puntos de Carga de Vehículos Eléctricos" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Boletín Eléctrico (CIE)", "description": "Certificado de Instalación Eléctrica para altas de luz, cambios de potencia e inspecciones" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Certificado de Eficiencia Energética (CEE)", "description": "Certificado obligatorio para venta o alquiler de inmuebles" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Auditoría de Eficiencia Energética" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proyectos de Instalaciones" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proyectos de Naves Industriales" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Proyectos de Ingeniería Civil" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Estudios del Terreno" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Medición de Parcelas" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Deslindes" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Levantamiento Topográfico" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Servicios Técnicos y Consultoría" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Gestiones ante Industria" } }
         ]
       }
     })} />

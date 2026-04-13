@@ -1,16 +1,26 @@
 User-agent: *
 Allow: /
-Disallow: /dist/
-Disallow: /.astro/
 
-# Bloquear rastreadores de IA que no respetan contenido
+# Crawlers de IA — permitidos para aparecer en resultados de ChatGPT, Gemini, etc.
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
 User-agent: CCBot
-Disallow: /
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
 
 Sitemap: https://sanesingenieria.com/sitemap-index.xml
